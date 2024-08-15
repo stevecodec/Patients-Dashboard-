@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <!-- Navigation Bar (Horizontal) -->
+    <nav class="navigation">
+        <div class="logo">
+            <img src="assets/TestLogo.svg" alt="Tech.Care Logo">
+        </div>
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li class="active"><a href="#">Patients</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Message</a></li>
+            <li><a href="#">Transactions</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="patient-list">
+                <ul id="patientList">
+                    <!--populated dynamically -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Diagnosis History -->
+            <section class="diagnosis-history">
+                <h2>Diagnosis History</h2>
+                <div class="chart-container">
+                    <canvas id="bloodPressureChart"></canvas> <!-- Chart.js -->
+                </div>
+                <div class="vitals">
+                    <div class="vital-card">
+                        <img src="assets/respiratory rate.svg" alt="Respiratory Icon">
+                        <h3>Respiratory Rate</h3>
+                        <p id="respiratoryRate">20 bpm</p>
+                        <span id="respiratoryLevel">Normal</span>
+                    </div>
+                    <div class="vital-card">
+                        <h3>Temperature</h3>
+                        <img src="assets/temperature.svg" alt="Temperature Icon">
+                        <p id="temperature">98.6°F</p>
+                        <span id="temperatureLevel">Normal</span>
+                    </div>
+                    <div class="vital-card">
+                        <h3>Heart Rate</h3>
+                        <img src="assets/HeartBPM.svg" alt="Heart Rate Icon">
+                        <p id="heartRate">78 bpm</p>
+                        <span id="heartRateLevel">Lower than Average</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diagnostic List -->
+            <section class="diagnostic-list">
+                <h2>Diagnostic List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problem/Diagnosis</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="diagnosticList">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="patient-profile" id="patientProfile">
+                <img id="profileSectionImage" src="assets/default.png" alt="Patient Image">
+                <h3 id="patientSectionName">Jessica Taylor</h3>
+                <p>Date of Birth: <span id="patientDOB">xxxxx</span></p>
+                <p>Gender: <span id="patientGender">xxxxx</span></p>
+                <p>Contact: <span id="patientContact">xxxxx</span></p>
+                <p>Insurance Provider: <span id="patientInsurance">xxxxx</span></p>
+                <button class="btn">Show All Information</button>
+            </div>
+            <div class="lab-results">
+                <h3>Lab Results</h3>
+                <ul id="labResultsList">
+                    <!-- Populated dynamically -->
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="check.js"></script>
+</body>
+
+</html>

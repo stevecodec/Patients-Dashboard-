@@ -1,0 +1,290 @@
+/* Navigation Bar */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff; 
+    padding: 30px 20px;
+    border-radius: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.navigation ul li {
+    margin: 0;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #072635;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.navigation ul li a:hover,
+.navigation ul li.active a {
+    background-color: #01F0D0;
+    border-radius: 5px;
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: 250px auto 300px;
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+    margin-bottom: 30px;
+}
+
+.navigation ul {
+    list-style-type: none;
+}
+
+.navigation li {
+    margin-bottom: 20px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.navigation li.active a {
+    color: #17a2b8;
+}
+
+.patient-list ul {
+    list-style-type: none;
+}
+
+.patient-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.patient-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.patient-item span {
+    font-size: 16px;
+}
+
+.patient-item.active {
+    background-color: #e9f7fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Diagnosis History */
+.diagnosis-history {
+    margin-bottom: 40px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+}
+
+.vitals {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.vital-card {
+    background-color: #f1f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+}
+
+.vital-card img {
+    margin-bottom: 10px;
+}
+
+.vital-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.vital-card p {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.vital-card span {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Diagnostic List */
+.diagnostic-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.diagnostic-list th,
+.diagnostic-list td {
+    padding: 12px 15px;
+    border: 1px solid #e9ecef;
+}
+
+.diagnostic-list th {
+    background-color: #f8f9fa;
+    font-size: 16px;
+}
+
+.diagnostic-list td {
+    font-size: 14px;
+}
+
+.diagnostic-list tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.patient-profile {
+    margin-bottom: 20px;
+}
+
+.patient-profile img{
+    display: grid;
+    place-items: center;
+}
+
+.patient-profile p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.patient-profile p img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #17a2b8;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #138496;
+}
+
+.lab-results h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.lab-results ul {
+    list-style-type: none;
+}
+
+.lab-results li {
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.lab-results li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 200px auto;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .vitals {
+        flex-direction: column;
+    }
+
+    .vital-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
